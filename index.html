@@ -3,53 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number Match Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>International Animated Life Science Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🎮 Number Match Game</h1>
-            <p class="subtitle">Test your memory and matching skills!</p>
-        </header>
-
-        <div class="game-info">
-            <div class="info-box">
-                <span class="label">Score:</span>
-                <span class="value" id="score">0</span>
-            </div>
-            <div class="info-box">
-                <span class="label">Moves:</span>
-                <span class="value" id="moves">0</span>
-            </div>
-            <div class="info-box">
-                <span class="label">Best Score:</span>
-                <span class="value" id="best-score">0</span>
-            </div>
+    <header>
+        <div class="language-switcher">
+            <button onclick="switchLanguage('en')">English</button>
+            <button onclick="switchLanguage('es')">Español</button>
+            <button onclick="switchLanguage('fr')">Français</button>
+            <button onclick="switchLanguage('de')">Deutsch</button>
+            <button onclick="switchLanguage('zh')">中文</button>
+            <button onclick="switchLanguage('ja')">日本語</button>
         </div>
-
-        <div class="difficulty-selector">
-            <label for="difficulty">Difficulty:</label>
-            <select id="difficulty" onchange="changeDifficulty()">
-                <option value="easy">Easy (4x4)</option>
-                <option value="medium" selected>Medium (4x6)</option>
-                <option value="hard">Hard (6x6)</option>
-            </select>
-        </div>
-
-        <div class="game-board" id="gameBoard"></div>
-
-        <div class="button-group">
-            <button class="btn btn-primary" onclick="resetGame()">New Game</button>
-            <button class="btn btn-secondary" onclick="undoMove()">Undo</button>
-        </div>
-
-        <div class="stats">
-            <h3>Game Stats</h3>
-            <p id="gameStatus">Ready to play!</p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+        <section class="hero animated">
+            <h1>Welcome to Our Life Science Hub</h1>
+            <p>Your gateway to international research and collaboration.</p>
+        </section>
+    </header>
+    <main>
+        <section id="research">
+            <h2>Research</h2>
+            <p>Explore our latest findings and publications.</p>
+            <!-- Translations and additional content here -->
+        </section>
+        <section id="services">
+            <h2>Services</h2>
+            <p>Discover the various services we offer.</p>
+            <!-- Translations and additional content here -->
+        </section>
+        <section id="team">
+            <h2>Meet the Team</h2>
+            <p>Learn more about our experts and their backgrounds.</p>
+            <!-- Translations and additional content here -->
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with our team.</p>
+            <!-- Translations and additional content here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 International Life Science Organization</p>
+    </footer>
 </body>
 </html>
