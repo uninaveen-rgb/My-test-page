@@ -3,49 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>International Animated Life Science Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>My Test Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .hero { background: lightblue; padding: 50px; text-align: center; }
+        .content-section { padding: 20px; }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="language-switcher">
-            <button onclick="switchLanguage('en')">English</button>
-            <button onclick="switchLanguage('es')">Español</button>
-            <button onclick="switchLanguage('fr')">Français</button>
-            <button onclick="switchLanguage('de')">Deutsch</button>
-            <button onclick="switchLanguage('zh')">中文</button>
-            <button onclick="switchLanguage('ja')">日本語</button>
-        </div>
-        <section class="hero animated">
-            <h1>Welcome to Our Life Science Hub</h1>
-            <p>Your gateway to international research and collaboration.</p>
-        </section>
+    <div class="language-switcher">
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('es')">Spanish</button>
+    </div>
+    <header class="hero">
+        <h1>Welcome to My Test Page</h1>
+        <p>This is a hero section.</p>
     </header>
-    <main>
-        <section id="research">
-            <h2>Research</h2>
-            <p>Explore our latest findings and publications.</p>
-            <!-- Translations and additional content here -->
-        </section>
-        <section id="services">
-            <h2>Services</h2>
-            <p>Discover the various services we offer.</p>
-            <!-- Translations and additional content here -->
-        </section>
-        <section id="team">
-            <h2>Meet the Team</h2>
-            <p>Learn more about our experts and their backgrounds.</p>
-            <!-- Translations and additional content here -->
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Get in touch with our team.</p>
-            <!-- Translations and additional content here -->
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 International Life Science Organization</p>
-    </footer>
+    <section id="about">
+        <h2>About</h2>
+        <p>This section is all about multilingual support.</p>
+    </section>
+    <section id="services">
+        <h2>Services</h2>
+        <p>These are the services we offer.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Get in touch with us!</p>
+    </section>
+    <script>
+        function switchLanguage(lang) {
+            // Add functionality to switch languages here
+            alert('Language switched to: ' + lang);
+        }
+    </script>
 </body>
 </html>
