@@ -1,67 +1,37 @@
-// script.js
-
-// Define multilingual support 
 const translations = {
     "en": {
-        "research": "Research", 
-        "services": "Services", 
-        "team": "Team", 
-        "contact": "Contact"
+        "greeting": "Hello",
+        "farewell": "Goodbye"
     },
     "es": {
-        "research": "Investigación", 
-        "services": "Servicios", 
-        "team": "Equipo", 
-        "contact": "Contacto"
+        "greeting": "Hola",
+        "farewell": "Adiós"
     },
     "fr": {
-        "research": "Recherche", 
-        "services": "Services", 
-        "team": "Équipe", 
-        "contact": "Contact"
+        "greeting": "Bonjour",
+        "farewell": "Au revoir"
     },
     "de": {
-        "research": "Forschung", 
-        "services": "Dienstleistungen", 
-        "team": "Team", 
-        "contact": "Kontakt"
+        "greeting": "Hallo",
+        "farewell": "Auf Wiedersehen"
     },
     "zh": {
-        "research": "研究", 
-        "services": "服务", 
-        "team": "团队", 
-        "contact": "联系"
+        "greeting": "你好",
+        "farewell": "再见"
     },
     "ja": {
-        "research": "研究", 
-        "services": "サービス", 
-        "team": "チーム", 
-        "contact": "連絡"
-    }  
+        "greeting": "こんにちは",
+        "farewell": "さようなら"
+    }
 };
 
-// Function to change language and update the DOM
-function changeLanguage(lang) {
-    document.getElementById('research').innerText = translations[lang].research;
-    document.getElementById('services').innerText = translations[lang].services;
-    document.getElementById('team').innerText = translations[lang].team;
-    document.getElementById('contact').innerText = translations[lang].contact;
+function switchLanguage(language) {
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        element.textContent = translations[language][key] || element.textContent;
+    });
 }
 
-// Animation example for language switcher
-const languageSwitcher = document.getElementById('language-switcher');
-languageSwitcher.addEventListener('click', () => {
-    languageSwitcher.classList.add('animated');
-    setTimeout(() => languageSwitcher.classList.remove('animated'), 1000);
-});
-
-// Initial language setting
-changeLanguage('en'); 
-
-// Add event listeners for language options
-const languageOptions = document.querySelectorAll('.language-option');
-languageOptions.forEach(option => {
-    option.addEventListener('click', (e) => {
-        changeLanguage(e.target.dataset.lang);
-    });
-});
+// Usage example:
+// switchLanguage('es');  // to switch to Spanish
